@@ -3,7 +3,7 @@ import {
     getTasks,
     getTask,
     createTask,
-    updateTasks,
+    updateTask,
     deleteTasks,
 } from "../controllers/tasks.controllers.js"
 
@@ -15,7 +15,7 @@ router.get('/tasks/:id', getTask);
 
 router.post('/tasks', createTask);
 
-router.put('/tasks/:id', updateTasks);
+router.put('/tasks/:id', updateTask);
 
 router.delete('/tasks/:id', deleteTasks);
 
