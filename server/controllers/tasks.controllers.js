@@ -29,11 +29,14 @@ export const getTask = async (req, res) => {
 export const createTask = async (req, res) => {
     try {
         const { title, description } = req.body;
+        console.log("Guardando Tarea", title); //mio
         const [result] = await pool.query(
             "INSERT INTO tasks(title, description) VALUES (?, ?)", 
             [title, description]
-        );
-        res.json({
+            );
+            console.log("Tarea Guardada", title); //mio
+
+            res.json({
             id: result.insertId,
             title,
             description,

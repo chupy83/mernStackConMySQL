@@ -1,0 +1,39 @@
+docker exec -it mysql bash
+// entrar al bash del docker mysql
+
+mysql -u root --password
+// entro a la base
+
+show databases;
+
+use taskdb;
+
+show tables;
+
+describe tasks;
+
+select * from tasks;
+
+
+xa crear una fila
+
+POST 
+http://localhost:4000/tasks
+en body 
+{
+    "title": "mi 5ta tarea",
+    "description": "esta es my 2da tarea"
+}
+
+
+obtener todas las filas
+
+GET
+http://localhost:4000/tasks
+
+
+obtener UNA fila en particular
+
+GET
+http://localhost:4000/tasks/6
+//en el 6 pongo el n id
